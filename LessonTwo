@@ -1,0 +1,64 @@
+//import only "Scanner" parth from "util" library
+import java.util.Scanner;
+//Import full "until" library
+import java.util.*;
+
+public class LessonTwo{
+	
+	static Scanner userInput = new Scanner(System.in);
+	
+	public static void main(String[] args){
+		String end = " ";
+		while(end != "end"){
+			System.out.print("Your favourite number: ");
+			
+			if(userInput.hasNextInt())
+			{
+				int firstNumberEntered = userInput.nextInt();
+				System.out.println("You entered " + firstNumberEntered);
+				System.out.println("Enter your second favourite number: ");
+				
+					if(userInput.hasNextInt()){
+						int secondNumberEntered = userInput.nextInt();
+						System.out.println("You entered " + secondNumberEntered);
+						int sum = firstNumberEntered + secondNumberEntered;
+						System.out.println("The sum your numbers is: " + sum);
+					}else{
+						System.out.println("Enter an integer number next time");
+					}
+			}else{
+				System.out.println("Enter an integer number next time");
+			}
+			
+			//AbsoluteValueOfVariable(entered form user)
+			System.out.println("Now enter one intiger negative number: ");
+			boolean isYourNumberIsInteger = userInput.hasNextInt();
+			if(isYourNumberIsInteger){
+				int negativeNumber = userInput.nextInt();
+				
+				if(negativeNumber < 0){
+					int negativeNumberABS = Math.abs(negativeNumber);
+					System.out.println(negativeNumberABS);
+				}else{
+					System.out.println("Enter negative number next time");
+				}
+			}else{
+				System.out.println("Enter intiger number next time");
+			}
+			System.out.println("If you want to stop write --/end/-- or continue with pressing any key");
+			String ifEnd = userInput.next();
+			//There is problem with next if 
+			//When user input string "end"
+			//the program don`t input "end"
+			//value in variable ifEnd
+			if(ifEnd == "end"){
+				end = "end";
+				System.out.println("That`s the end...  :D");
+			}else{
+				end = " ";
+				System.out.println("deeba ne vliza v toa if");
+			}
+			
+		}
+	}
+}
