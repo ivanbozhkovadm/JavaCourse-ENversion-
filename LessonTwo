@@ -47,11 +47,7 @@ public class LessonTwo{
 			}
 			System.out.println("If you want to stop write --/end/-- or continue with pressing any key");
 			String ifEnd = userInput.next();
-			//There is problem with next if 
-			//When user input string "end"
-			//the program don`t input "end"
-			//value in variable ifEnd
-			if(ifEnd == "end"){
+			if(ifEnd.equals("end"))){
 				end = "end";
 				System.out.println("That`s the end...  :D");
 			}else{
