@@ -56,7 +56,7 @@ public class LessonTwo{
 				System.out.println("That`s the end...  :D");
 			}else{
 				end = " ";
-				System.out.println("deeba ne vliza v toa if");
+				System.out.println("----The last if is false----");
 			}
 			
 		}
