@@ -1,6 +1,6 @@
 //import only "Scanner" parth from "util" library
 import java.util.Scanner;
-//Import full "until" library
+//Import full "util" library
 import java.util.*;
 
 public class LessonTwo{
