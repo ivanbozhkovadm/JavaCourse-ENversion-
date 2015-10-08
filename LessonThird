@@ -1,6 +1,10 @@
+import java.util.List;
+import java.util.ArrayList;
+
+
 public class LessonThree{
 	public static void main(String[] args){
-		int randomNumber = (int)(Math.random() * 50);
+		/*int randomNumber = (int)(Math.random() * 50);
 		
 		System.out.println("The random number is: " + randomNumber);
 		if(randomNumber < 25)
@@ -35,8 +39,23 @@ public class LessonThree{
 		int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo;
 		System.out.println(biggestValue);
 
-		char theGrade = (char) (((Math.random()* 3) + 65));
-		switch(theGrade){
+		/*char theGrade = (char) (((Math.random()* 5) + 65));
+		if((int)theGrade == 69){
+			theGrade++;
+		}*/
+		
+		int ARRAY_SIZE = 6;
+		char arrayFromCahr[] = {'A','B','C','D','E','F'};
+		
+		ArrayList myList = new ArrayList();
+		for (int i = 0; i <arrayFromCahr.length ; i++) {
+			if(i == 4){
+				i++;
+			}
+			myList.add(arrayFromCahr[i]);
+		}
+		int index = (int)(Math.random()*5);
+		switch((char)myList.get(index)){
 		case 'A':
 			System.out.println("Great");
 			break;
@@ -49,10 +68,10 @@ public class LessonThree{
 		case 'D':
 			System.out.println("Bad");
 			break;
-			//Never Failed :D
 		case 'F':
 			System.out.println("You Failed");
 			break;
 		}
+	
 	}
 }
