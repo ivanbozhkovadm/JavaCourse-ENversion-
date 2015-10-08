@@ -1,0 +1,58 @@
+public class LessonThree{
+	public static void main(String[] args){
+		int randomNumber = (int)(Math.random() * 50);
+		
+		System.out.println("The random number is: " + randomNumber);
+		if(randomNumber < 25)
+		{
+			System.out.println("The random number is less than 25.");
+		}else
+			if(randomNumber > 25){
+				System.out.println("The random number is bigger than 25.");
+			}
+			else{
+				System.out.println("The random number is equal to 25.");
+			}
+		if((true) || (true)){
+			System.out.println("Both are TRUE");
+		}
+		if((true)|(false)){
+			System.out.println("ONE of both is TRUE");
+		}
+		if((true) && (true)){
+			System.out.println("Both are true");
+		}
+		if((true)&(false)){
+			System.out.println("ONE of them is FALSE");
+		}
+		if((true)^(false)){
+			System.out.println("There is one TRUE and one FALSE");
+		}
+		
+		int valueOne = 1;
+		int valueTwo = 2;
+		
+		int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo;
+		System.out.println(biggestValue);
+
+		char theGrade = (char) (((Math.random()* 3) + 65));
+		switch(theGrade){
+		case 'A':
+			System.out.println("Great");
+			break;
+		case 'B':
+			System.out.println("Good job");
+			break;
+		case 'C':
+			System.out.println("OK");
+			break;
+		case 'D':
+			System.out.println("Bad");
+			break;
+			//Never Failed :D
+		case 'F':
+			System.out.println("You Failed");
+			break;
+		}
+	}
+}
