@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class LessonFive{
+
+	static double myPI = 3.14159; 
+	
+	public static void main(String[] args){
+		localPI();
+		//Value of global variable myPI
+		System.out.println("Global: " + myPI);
+		int d = 5;
+		tryToChange(d);
+		System.out.println("Real value of d: " + d);
+	
+	}
+	
+
+	public static int localPI(){
+		double smallPI = 3.14; //Local
+		//double myPI = 3.0;
+		//Change value of global variable myPI
+		myPI = myPI + 2;
+		System.out.println("Local PI: " + myPI);
+		System.out.println("Small PI: " + smallPI);
+		return 1;
+	}
+	
+	public static void tryToChange(int d){
+		d = d + 1;
+		System.out.println("tryToChande-> d: " + d);
+	}
+	
+}
