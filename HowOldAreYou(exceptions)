@@ -1,0 +1,31 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class AgeException{
+	static Scanner userInput = new Scanner(System.in);
+	public static void main(String[] args){
+		while(true){
+		System.out.println("How old are you? :)");
+		System.out.println("Enter your age with positive");
+		System.out.print("(intiger number): ");
+		int age = checkValidAge();
+		if(age < 0){
+			System.out.println("It is not positive number :(");
+		}else{
+			if(age > 0){
+				System.out.println("You are " + age + " years old ;)" );
+				System.out.println(); 
+				}
+			}
+		}
+	}
+	public static int checkValidAge(){
+		try{
+			return userInput.nextInt();
+		}catch(InputMismatchException e){
+			 userInput.next();
+			 System.out.println("It is not a whole number :( ");
+			 System.out.println(); 
+			 return 0;
+		}
+	}
+}
