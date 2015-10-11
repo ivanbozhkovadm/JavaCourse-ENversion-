@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class GameGuessTheNumber{
+	static Scanner userInput = new Scanner(System.in);
+	
+	public static void main(String[] args){
+		
+		int randomNumber = (int)(Math.random()*51);
+		System.out.println(randomNumber);
+	
+		System.out.println("Guess the number from 0 to 50: ");
+		int userNumber = userInput.nextInt();
+		System.out.println("Your number is: "+userNumber);
+		while(userNumber != randomNumber){
+			System.out.println("Try again :)");
+			userNumber = userInput.nextInt();
+			System.out.println("Your number is: "+userNumber);
+		}
+		
+		System.out.println("Congratulations!"
+				+ " You guess the number!");
+		
+	}
+	
+}
